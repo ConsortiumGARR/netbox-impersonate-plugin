@@ -1,0 +1,87 @@
+# See PEP 518 for the spec of this file
+# https://www.python.org/dev/peps/pep-0518/
+
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name =  "netbox-impersonate-plugin"
+version = "0.1.0"
+authors = [
+    {name = "rizlas", email = "8522635+rizlas@users.noreply.github.com"},
+]
+description = "Browse NetBox as another user."
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+keywords = ["netbox", "netbox-plugin"]
+
+classifiers=[
+    'Development Status :: 3 - Alpha',
+    'Framework :: Django',
+    'Framework :: Django :: 6.1',
+    'Intended Audience :: Developers',
+    'Intended Audience :: System Administrators',
+    'Intended Audience :: Telecommunications Industry',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
+    'Topic :: System :: Networking',
+]
+
+requires-python = ">=3.12.0"
+
+dependencies = [
+    "django-impersonate>=1.9.5,<2",
+]
+
+[dependency-groups]
+dev = [
+    "black==26.10.1",
+    "pre-commit==4.7.0",
+    "ruff==0.17.3",
+]
+
+[project.urls]
+Documentation = "https://github.com/ConsortiumGARR/netbox-impersonate-plugin/blob/main/README.md"
+Source = "https://github.com/ConsortiumGARR/netbox-impersonate-plugin"
+Tracker = "https://github.com/ConsortiumGARR/netbox-impersonate-plugin/issues"
+
+[tool.black]
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501", # line too long, handled by black
+    "B008", # do not perform function calls in argument defaults
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["netbox_impersonate_plugin*"]
+
+[tool.setuptools.package-data]
+netbox_impersonate_plugin = [
+    "templates/**",
+    "static/**",
+    "locale/**/*.mo",
+]

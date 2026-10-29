@@ -1,0 +1,9 @@
+include CHANGELOG.md
+include COMPATIBILITY.md
+include CONTRIBUTING.md
+include LICENSE
+include README.md
+
+recursive-include netbox_impersonate_plugin/templates *.html
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

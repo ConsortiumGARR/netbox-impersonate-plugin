@@ -1,0 +1,6 @@
+<form method="post" action="{% url 'plugins:netbox_impersonate_plugin:impersonate_start' uid=object.pk %}" class="d-inline-block">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-orange">
+    <i class="mdi mdi-account-switch"></i> Impersonate
+  </button>
+</form>

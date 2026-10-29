@@ -1,0 +1,7 @@
+<form method="post" action="{% url 'plugins:netbox_impersonate_plugin:impersonate_stop' %}" class="d-flex align-items-center me-3">
+  {% csrf_token %}
+  <span class="badge bg-red text-white me-2">Impersonating {{ request.user.username }}</span>
+  <button type="submit" class="btn btn-sm btn-outline-danger">
+    <i class="mdi mdi-account-switch"></i> Stop
+  </button>
+</form>
