@@ -43,6 +43,13 @@ class ImpersonateTestCase(TestCase):
         url = reverse("users:user", args=[self.user.pk])
         self.assertContains(self.client.get(url), reverse(START, args=[self.user.pk]))
 
+    def test_button_in_user_list(self):
+        self.login(self.admin)
+        response = self.client.get(reverse("users:user_list"))
+        self.assertContains(response, reverse(START, args=[self.user.pk]))
+        self.assertNotContains(response, reverse(START, args=[self.other_admin.pk]))
+        self.assertNotContains(response, reverse(START, args=[self.inactive.pk]))
+
     def test_non_superuser_cannot_start(self):
         self.login(self.user)
         self.client.post(reverse(START, args=[self.admin.pk]))

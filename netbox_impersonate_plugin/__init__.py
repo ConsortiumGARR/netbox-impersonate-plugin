@@ -29,6 +29,8 @@ class ImpersonateConfig(PluginConfig):
         super().ready()
         from django.conf import settings
 
+        from . import tables  # noqa: F401
+
         # NetBox does not pass arbitrary settings from configuration.py to Django, so the
         # plugin owns this one. NetBox users have no is_staff, which the library's default
         # check reads.

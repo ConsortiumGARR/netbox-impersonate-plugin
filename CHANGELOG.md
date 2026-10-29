@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Impersonate button on the user page, for superusers.
+- Impersonate button on the user page and column in the user list, for superusers.
 - Impersonation through django-impersonate, limited to superusers impersonating
   active non-superusers.
 - Start and stop accept POST only.

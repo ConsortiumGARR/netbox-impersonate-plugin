@@ -4,7 +4,8 @@ Browse NetBox as another user.
 
 ## Features
 
-- A superuser can impersonate any active, non-superuser user from the user page.
+- A superuser can impersonate any active, non-superuser user from the user page or
+  from the Impersonate column of the user list.
 - The UI, and the REST API and GraphQL used from the same browser session, then see
   the impersonated user and its RBAC. Requests authenticated with a token are not
   affected.
@@ -18,6 +19,16 @@ Impersonation is provided by
 
 Changes made while impersonating are recorded in the changelog as the impersonated
 user.
+
+## Screenshots
+
+The Impersonate column in the user list:
+
+![User list with the Impersonate column](images/user-list.png)
+
+Browsing as `viewer`, who may only view Site 1 and Site 2 out of four sites:
+
+![Site list while impersonating viewer](images/impersonating.png)
 
 ## Compatibility
 
@@ -66,8 +77,8 @@ No configuration is needed.
 
 ## Usage
 
-Open a user in NetBox as a superuser and click **Impersonate**. Click **Stop** in the
-top bar to go back.
+As a superuser, click **Impersonate** on a user page or in the user list. Click
+**Stop** in the top bar to go back.
 
 ## Contributing
 
