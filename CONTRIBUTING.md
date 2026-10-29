@@ -14,7 +14,7 @@ docker run -d --name nbimp-pg -p 5432:5432 -e POSTGRES_DB=netbox \
   -e POSTGRES_USER=netbox -e POSTGRES_PASSWORD=netbox postgres:16-alpine
 docker run -d --name nbimp-redis -p 6379:6379 redis:7-alpine
 
-git clone --depth 1 --branch v4.7 https://github.com/netbox-community/netbox.git
+git clone --depth 1 --branch v4.7.4 https://github.com/netbox-community/netbox.git
 pip install -r netbox/requirements.txt -e .
 
 cd netbox/netbox
