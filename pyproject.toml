@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name =  "netbox-impersonate-plugin"
-version = "0.1.0"
+version = "1.0.0"
 authors = [
     {name = "rizlas", email = "8522635+rizlas@users.noreply.github.com"},
 ]
@@ -18,7 +18,7 @@ license-files = ["LICENSE"]
 keywords = ["netbox", "netbox-plugin"]
 
 classifiers=[
-    'Development Status :: 3 - Alpha',
+    'Development Status :: 5 - Production/Stable',
     'Framework :: Django',
     'Framework :: Django :: 6.1',
     'Intended Audience :: Developers',

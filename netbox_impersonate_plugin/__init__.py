@@ -6,7 +6,7 @@ Lets a superuser browse NetBox as another user.
 
 __author__ = """rizlas"""
 __email__ = "8522635+rizlas@users.noreply.github.com"
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 
 from netbox.plugins import PluginConfig

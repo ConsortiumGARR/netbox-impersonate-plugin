@@ -5,7 +5,7 @@ release of NetBox Impersonate Plugin.
 
 | Plugin Version | Minimum NetBox Version | Maximum NetBox Version |
 |----------------|------------------------|------------------------|
-| 0.1.0 | 4.7.0 | 4.7.99 |
+| 1.0.0 | 4.7.0 | 4.7.99 |
 
 ## Notes
 

@@ -34,7 +34,7 @@ Browsing as `viewer`, who may only view Site 1 and Site 2 out of four sites:
 
 | NetBox Version | Plugin Version |
 |----------------|----------------|
-|     4.7.x      |      0.1.0     |
+|     4.7.x      |      1.0.0     |
 
 The full matrix is in [COMPATIBILITY.md](COMPATIBILITY.md).
 

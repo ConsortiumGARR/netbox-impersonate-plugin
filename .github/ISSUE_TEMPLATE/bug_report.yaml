@@ -11,7 +11,7 @@ body:
     attributes:
       label: NetBox Impersonate Plugin version
       description: What version of NetBox Impersonate Plugin are you currently running?
-      placeholder: v0.1.0
+      placeholder: v1.0.0
     validations:
       required: true
   - type: input
